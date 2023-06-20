@@ -1,0 +1,103 @@
+DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Tab container */
+    .tab-container {
+      display: flex;
+    }
+    
+    /* Tab buttons */
+    .tab {
+      flex: 1;
+      background-color:blanchedalmond ;
+      cursor: pointer;
+      padding: 10px;
+      text-align: center;
+    }
+    
+     /* Active tab button */
+    .active {
+      background-color: #ccc;
+    }
+    
+    /* Tab content */
+    .tab-content {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    body{
+      background-color:#E799A3;
+    }
+    </style>
+</head>
+<body>
+  <div class="tab-container">
+    <div class="tab active" onclick="changeTab(event, 'tab1')">Home</div>
+    <div class="tab" onclick="changeTab(event, 'tab2')">About Us</div>
+    <div class="tab" onclick="changeTab(event, 'tab3')">Contacts</div>
+    <div class="tab" onclick="changeTab(event, 'tab4')">Customer Service</div>
+  </div>
+  <div id="tab1" class="tab-content" style="display: block;">
+    <h2>Home</h2>
+    <p>Welcome to pinkies cakes!At Pinkies Cakes,we are passionate about creating delectable,handcrafted that delight both the eyes and the taste buds. With years of experience and a commitment to quality,we have become a trusted name in the world of confectionery.</p>
+  </div>
+  
+  <div id="tab2" class="tab-content">
+    <h2>About Us</h2>
+    <p>At Pinkies Cakes,we are passionate about crafting exquisite cakes that bring joy and sweetness to life's special moments. With over a decade of experience in the art of cake making, we have become a trusted name in the confectionery world.</p>
+  </div>
+    
+    <div id="tab3" class="tab-content">
+    <h2>Contacts</h2>
+    <p>You can contact us through our email address :pinkiescakes@gmail.com</p>
+  </div>
+  <div id="tab4" class="tab-content">
+    <h2>Customer Service</h2>
+    <p>To get in touch with our helpline in case of any inquiries send an email to pinkieshelpline@gmail.com. For more inquiries dial 093758397.</p>
+  </div>
+    
+    <script>
+    // Function to switch tabs
+    function changeTab(event, tabId) {
+      var i, tabContent, tabLinks;
+      
+      // Hide all tab content
+      tabContent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+      }
+       // Remove "active" class from all tab buttons
+      tabLinks = document.getElementsByClassName("tab");
+      for (i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+      }
+    
+    // Show the selected tab content
+      document.getElementById(tabId).style.display = "block";
+      
+      // Add the "active" class to the clicked tab button
+      event.currentTarget.className += " active";
+       }
+  </script>
+</body>
+</html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
